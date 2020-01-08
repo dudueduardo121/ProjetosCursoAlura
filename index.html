@@ -1,0 +1,228 @@
+<meta charset="UTF-8">
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+var tela = document.querySelector('canvas');
+var pincel = tela.getContext('2d');
+var raio = 10;
+var xAleatorio;
+var yAleatorio;
+
+pincel.fillStyle = 'white';
+pincel.fillRect(0,0, 600,400);
+
+function desenhacirculo(x,y,raio, cor){
+
+    pincel.fillStyle = cor;
+    pincel.beginPath();
+    pincel.arc(x,y,raio, 0, 2 * Math.PI);
+    pincel.fill();
+}
+
+function limpatela(){
+    pincel.clearRect(0,0,600,400);
+}
+
+function desenhaalvo(x, y){
+
+    desenhacirculo(x,y,raio+30, 'red');
+    desenhacirculo(x,y,raio+ 20, 'white');
+    desenhacirculo(x,y,raio, 'red');
+}
+
+function sorteiposicao(maximo){
+    return Math.floor(Math.random() * maximo);
+}
+
+function atualizatela(){
+    limpatela();
+    xAleatorio = sorteiposicao(600);
+    yAleatorio = sorteiposicao(400);
+
+    desenhaalvo(xAleatorio,yAleatorio);
+
+}
+
+setInterval(atualizatela, 1000);
+
+function dispara(evento){
+    var x = evento.pageX - tela.offsetLeft;
+    var y = evento.pageY - tela.offsetTop;
+    
+
+    if((x > xAleatorio - raio) 
+    && (x < xAleatorio + raio) 
+    && (y > yAleatorio - raio) 
+    && (y < yAleatorio + raio)){
+       alert('Acertou'); 
+    }
+
+}
+tela.onclick = dispara;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//DESENHADO PONTOS NA TELA
+
+/* var tela = document.querySelector('canvas');
+var pincel = tela.getContext('2d');
+
+pincel.fillStyle = 'grey';
+pincel.fillRect(0,0, 600,400);
+
+function desenhacirculo(evento){
+    
+    var x = evento.pageX - tela.offsetLeft;
+    var y = evento.pageY - tela.offsetTop;
+    pincel.fillStyle = 'red';
+    pincel.beginPath();
+    pincel.arc(x,y,10, 0, 2 * 3.14);
+    pincel.fill();
+    console.log(x + ' , ' + y);
+}
+
+tela.onclick = desenhacirculo; */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*     function desenhaquadrado(x,y, cor){
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.fillStyle = cor;
+        pincel.fillRect(x,y,50,50);
+        pincel.fillStroke = 'block';
+        pincel.strokeRect(x,y,50,50);
+    }
+    function desenhaquadrado2(x,y, cor){
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.fillStyle = cor;
+        pincel.fillRect(x,y,50,50);
+        pincel.fillStroke = 'block';
+        pincel.strokeRect(x,y,50,50);
+    }
+        var x = 0;
+        var y = 0;
+        while(x < 600 ){
+            desenhaquadrado2(x,0,'blue');
+            x += 50;
+            while( y < 400){
+                desenhaquadrado2(0,y,'blue');
+                y += 50;
+            }
+            
+        } */
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   /*  //pinta a tela canvas    
+    pincel.fillStyle = 'lightgrey';
+    //tamanho da tela
+    pincel.fillRect(0, 0, 600, 400);
+
+    pincel.fillStyle = 'red';
+    pincel.fillRect(0, 0, 200, 400);
+
+    pincel.fillStyle = 'green';
+    pincel.fillRect(400, 0, 200, 400);
+
+    // triangulo
+    pincel.fillStyle = 'blue';
+    pincel.beginPath();
+    pincel.moveTo(300, 200);
+    pincel.lineTo(200, 400);
+    pincel.lineTo(400, 400);
+    pincel.fill();
+
+    pincel.fillStyle = 'blue';
+    pincel.beginPath();
+    pincel.moveTo(300, 200);
+    pincel.lineTo(0, -400);
+    pincel.lineTo(400, 0);
+    pincel.fill();
+
+    // bola
+
+    pincel.fillStyle = 'yellow';
+    pincel.beginPath();
+    pincel.arc(300, 200, 50, 0, 2 * 3.14);
+    pincel.fill(); */
+    
+
+</script>
