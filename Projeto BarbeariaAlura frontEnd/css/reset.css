@@ -30,6 +30,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	font-family: 'Fugaz One', cursive;
+	
 }
 ol, ul {
 	list-style: none;

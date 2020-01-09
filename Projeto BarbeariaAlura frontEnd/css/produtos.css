@@ -7,6 +7,7 @@ header {
 	position: relative;
 	width: 940px;
 	margin: 0 auto;
+	height: 220px;
 }
 
 nav {
@@ -44,7 +45,7 @@ nav a:hover {
 	text-align: center;
 	width: 30%;
 	vertical-align: top;
-	margin: 0 1.5%;
+	margin: 0 1.0%;
 	padding: 30px 20px;
 	box-sizing: border-box;
 	border: 2px solid #000000;
@@ -156,10 +157,7 @@ td, th {
 	padding: 5px 20px;
 }
 
-main{
-	width: 940px;
-	margin: 0 auto;
-}
+
 
 form{
 	margin: 40px 0;
@@ -200,4 +198,19 @@ form label, form legend{
 
 table{
 	margin: 10px;
+}
+
+@media screen and (max-width: 480px){
+	.caixa, .principal,.conteudo-beneficios,.mapa-conteudo,.video{
+		width: auto;
+	}
+	h1{
+		text-align: center;
+	}
+	nav{
+		position: static;
+	}
+	.lista-beneficios, .imagembeneficios{
+		width: 100%;
+	}
 }
