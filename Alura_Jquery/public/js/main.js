@@ -6,6 +6,7 @@ $(document).ready(function() {
     inicializaTamanhoFrase();
     inicializacontadores();
     inicializaCronometro();
+    inicializarMarcadores();
     //quando a pagina for carregada aiva no botao chama a função reinicia jogo
     $("#botao-reiniciar").click(reiniciaJogo);
 });
@@ -37,6 +38,24 @@ function inicializacontadores(){
     
 });
 }
+// função inicia marcadores e verifica se frase digitada esta corretaa
+function inicializarMarcadores(){
+
+    var frase = $(".frase").text();
+    campo.on("input", function(){
+    var digitado = campo.val();
+    var comparar = frase.substr(0,digitado.length);
+
+        if(digitado == comparar){
+            campo.addClass("campo-correto");
+            campo.removeClass("campo-errado")
+        }else{
+            campo.addClass("campo-errado");
+            campo.removeClass("campo-correto");
+        }
+    });
+}
+
 //------------------------------------//
 
 // função inicicronometro segundos e bloquear o textarea
@@ -48,9 +67,9 @@ function inicializaCronometro(){
         $("#tempo-digitacao").text(tempoRest);
 
         if(tempoRest < 1){
-            campo.attr("disabled", true);
-            campo.addClass("campoDesativado");
+            finalizaJogo();
             clearInterval(cronometroId);
+            
         }
         
     }, 1000);
@@ -70,10 +89,19 @@ function reiniciaJogo(){
         $("#contador-caracteres").text("0");
         $("#tempo-digitacao").text(tempoInicial);
         inicializaCronometro();
+        campo.removeClass("campo-correto");
+        campo.removeClass("campo-errado");
 }
 
 
 //------------------------------------//
+
+function finalizaJogo(){
+    campo.attr("disabled", true);
+    campo.addClass("campoDesativado");
+    inserePlacar();
+}
+
 
 
 

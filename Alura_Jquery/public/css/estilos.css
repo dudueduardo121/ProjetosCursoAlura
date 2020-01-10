@@ -1,12 +1,14 @@
 .frase{
     font-size: 20px;
     font-weight: bold;
+    text-align: left;
 }
 
 .campo-digitacao{
     font-size: 20px;
     font-weight: bold;
     height: 200px;
+    border: 3px solid black;
 }
 
 .campoDesativado{
@@ -15,4 +17,10 @@
 
 .icones{
     vertical-align: middle;
+}
+.campo-correto{
+    border: 3px solid green;
+}
+.campo-errado{
+    border: 3px solid red;
 }
