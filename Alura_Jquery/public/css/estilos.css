@@ -1,0 +1,18 @@
+.frase{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.campo-digitacao{
+    font-size: 20px;
+    font-weight: bold;
+    height: 200px;
+}
+
+.campoDesativado{
+    background-color: lightgray;
+}
+
+.icones{
+    vertical-align: middle;
+}
