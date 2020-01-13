@@ -9,6 +9,16 @@ $(document).ready(function() {
     inicializarMarcadores();
     //quando a pagina for carregada aiva no botao chama a função reinicia jogo
     $("#botao-reiniciar").click(reiniciaJogo);
+    atualizaPlacar();
+
+    $("#usuarios").selectize({
+        create: true,
+        sortField: 'text'
+    });
+
+    $('.tooltip').tooltipster({
+        trigger: "custom"
+    });
 });
 
 
@@ -41,8 +51,9 @@ function inicializacontadores(){
 // função inicia marcadores e verifica se frase digitada esta corretaa
 function inicializarMarcadores(){
 
-    var frase = $(".frase").text();
+    
     campo.on("input", function(){
+    var frase = $(".frase").text();
     var digitado = campo.val();
     var comparar = frase.substr(0,digitado.length);
 
@@ -60,8 +71,9 @@ function inicializarMarcadores(){
 
 // função inicicronometro segundos e bloquear o textarea
 function inicializaCronometro(){
-    var tempoRest = $("#tempo-digitacao").text();
+    
     campo.one("focus", function(){
+    var tempoRest = $("#tempo-digitacao").text();
     var cronometroId = setInterval(function(){
             tempoRest --;
         $("#tempo-digitacao").text(tempoRest);
@@ -102,7 +114,10 @@ function finalizaJogo(){
     inserePlacar();
 }
 
-
+function  atualizaTempoInicial(tempo){
+    tempoInicial = tempo;
+    $("#tempo-digitacao").text(tempo);
+}
 
 
 
