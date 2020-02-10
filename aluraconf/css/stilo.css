@@ -1,0 +1,184 @@
+.header{
+    background: url(../img/destaque.jpeg) no-repeat;
+    background-size:cover ;
+    padding-top: 32px;
+}
+.header.main-menu{
+    text-align: center;
+    
+}
+.header .main-menu .menu-item{
+    display: inline-block;
+    margin:  0 2px 32px 0;
+}
+
+.header .main-menu .menu-item a{
+    color: white;
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.5s;
+}
+.header .main-menu .menu-item a:hover{
+    background-color: #48a3a6;
+}
+.header .jumbotrom {
+    padding: 0 0 44px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.header .panel-main {
+    color: white;
+    text-shadow: 4px 4px 10px black;
+}
+
+.header .jumbotrom .title {
+    font-size: 3em;
+}
+
+.header .jumbotrom .sub-title {
+    font-size: 2.6em;
+    color: #64ff64;
+    margin-top: 8px;
+}
+.header .jumbotrom .button {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 25px 50px ;
+    border-radius: 5px;
+    background-color: #48a3a6;
+}
+
+.header .jumbotrom .panel-sub {
+    margin-top: 30px;
+}
+.panel-about {
+
+    margin-top: 20px;
+}
+.panel-about .title{
+    font-size: 30px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.panel-about .sub-title{
+    font-size: 24px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.panel-about .descricao {
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.container{
+    width: 86%;
+    margin: 0 auto;
+}
+
+.panel-speakers .about-speakers{
+    text-align: center;
+}
+.panel-speakers {
+    background: #ef7247;
+    padding: 4px;
+}
+.panel-speakers  .title{
+    color: white;
+    font-size: 40px;
+    margin-bottom: 16px;
+}
+.panel-speakers  .subtitle{
+    color: white;
+    font-size: 30px;
+    margin-bottom: 16px;
+}
+
+.panel-speakers .speaker{
+    background: white;
+    display: inline-block;
+    margin: 0 16px 32px 0;
+    padding: 18px;
+    border-radius: 10px;
+    width: 250px;
+    vertical-align: top;
+}
+
+.panel-speakers .speakers{
+    text-align: center;
+}
+.panel-speakers .image{
+    border-radius: 100%;
+}
+.panel-speakers .speaker-name{
+    margin-top: 10px;
+}
+
+.panel-speakers .speaker-bio{
+    font-weight: bold;
+    margin-top: 16px;
+}
+
+.panel-speakers .speaker-speach{
+    margin-top: 16px;
+}
+
+.panel-form{
+    margin-top: 32px;
+}
+
+.panel-form .title{
+    font-size: 32px;
+    color: #ef7247;
+    text-align: center;
+    text-transform: uppercase;
+}
+.field{
+    margin-bottom: 26px;
+}
+
+.field label{
+    display:block;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.field .field-input{
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px #48a3a6;
+}
+
+.button {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 25px 50px ;
+    border-radius: 5px;
+    background-color: #48a3a6;
+}
+
+.button-place{
+    text-align: center;
+}
+
+
+
+@media(min-width: 650px){
+    .header .jumbotrom {
+        font-size: 28px;
+    }
+}
+
